@@ -1,9 +1,7 @@
-/* add css module styles here (optional) */
+.item{
+  font-size: 18px;
+}
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+.form-item {
+  margin-bottom: 12px;
 }
