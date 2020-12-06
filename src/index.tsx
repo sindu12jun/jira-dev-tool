@@ -1,16 +1,18 @@
 import * as React from 'react'
 import styles from './styles.module.css'
-import { startServer } from './server'
 import { installDevTool } from './dev-tool'
+import { startServer } from './server'
 
 interface Props {
   text: string
 }
 
 export const loadDevTools = (callback: () => void) => {
-  startServer()
+  startServer();
   installDevTool()
-  callback?.()
+  if (callback) {
+    callback()
+  }
 }
 
 export const ExampleComponent = ({ text }: Props) => {
