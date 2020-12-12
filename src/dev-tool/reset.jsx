@@ -11,5 +11,5 @@ export const Reset = () => {
       window.location.replace(window.location.origin);
     }
   }
-  return <Button onClick={clear}>清空数据库</Button>;
+  return <Button size={'small'} onClick={clear}>清空数据库</Button>;
 };

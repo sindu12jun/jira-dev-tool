@@ -1,7 +1,7 @@
 import { userHandlers } from './account'
 import { getRestHandlers } from './rest-handlers'
 import { match } from 'node-match-path'
-import { epicDB, kanbanDB, projectDB, tagDB, taskDB, userDB } from '../data/rest'
+import { epicDB, kanbanDB, projectDB, tagDB, taskDB, taskTypeDB, userDB } from '../data/rest'
 import { reorderHandlers } from './reorder-handlers'
 
 function ls(key, defaultVal) {
@@ -23,7 +23,7 @@ export const handlers = [
   ...getRestHandlers("tasks", taskDB),
   ...getRestHandlers("kanbans", kanbanDB),
   ...getRestHandlers("persons", userDB),
-  ...getRestHandlers("taskTypes", taskDB),
+  ...getRestHandlers("taskTypes", taskTypeDB),
   ...getRestHandlers("tags", tagDB),
   ...getRestHandlers("users", userDB),
   ...reorderHandlers,
@@ -33,7 +33,7 @@ export const handlers = [
     async resolver(req, res, ctx) {
       try {
         if (shouldFail(req)) {
-          throw new Error("Request failure (for testing purposes).");
+          throw new Error("请求失败，请检查 jira-dev-tool 的设置");
         }
         const result = await handler.resolver(req, res, ctx);
         return result;

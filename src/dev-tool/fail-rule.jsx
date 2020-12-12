@@ -61,7 +61,7 @@ export const FailRule = () => {
             value={url}
             onChange={(event) => setUrl(event.target.value)}
             addonBefore={prefixSelector}
-            placeholder={"/api/projects"}
+            placeholder={"/projects"}
           />
         </Form.Item>
         <Form.Item>

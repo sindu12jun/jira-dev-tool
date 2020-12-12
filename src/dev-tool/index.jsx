@@ -7,26 +7,27 @@ import { FailureRate } from './failure-rate'
 import { Reset } from './reset'
 import { FailRule } from './fail-rule'
 import { ReactQueryDevtoolsPanel } from 'react-query-devtools'
+import 'antd/dist/antd.css'
 
-const { Text, Link } = Typography;
-const { TabPane } = Tabs;
+const { Text, Link } = Typography
+const { TabPane } = Tabs
 
 const DevTool = () => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(false)
   return (
     <div>
       {visible ? null : (
         <div
           style={{
-            position: "fixed",
-            bottom: "50px",
-            right: "50px",
-            zIndex: 9999,
+            position: 'fixed',
+            bottom: '50px',
+            right: '50px',
+            zIndex: 9999
           }}
         >
-          <Tooltip title={"点击使用开发者控制台"}>
+          <Tooltip title={'点击使用开发者控制台'}>
             <SettingTwoTone
-              style={{ fontSize: "22px" }}
+              style={{ fontSize: '22px'}}
               onClick={() => setVisible(true)}
             />
           </Tooltip>
@@ -35,10 +36,10 @@ const DevTool = () => {
       <Drawer
         visible={visible}
         onClose={() => setVisible(false)}
-        bodyStyle={{ padding: "10px" }}
-        placement={"bottom"}
-        key={"bottom"}
-        height={"40%"}
+        bodyStyle={{ padding: '10px' }}
+        placement={'bottom'}
+        key={'bottom'}
+        height={'40%'}
       >
         <Text type="secondary">开发者控制台</Text>
         <Tabs defaultActiveKey="1">
@@ -51,19 +52,18 @@ const DevTool = () => {
             }
             key="1"
           >
-            <div className={"form-item"}>
+            <div style={{ marginBottom: '0.5rem' }} className={'form-item'}>
               <Reset />
             </div>
             <div
-              className={"form-item item"}
-              style={{ display: "flex", justifyContent: "space-between" }}
+              style={{ marginBottom: '0.3rem', display: 'flex', justifyContent: 'space-between' }}
             >
               <label>请求最短时间</label>
               <RequestTime />
             </div>
             <div
-              className={"form-item item"}
-              style={{ display: "flex", justifyContent: "space-between" }}
+              className={'form-item'}
+              style={{ marginBottom: '0.3rem', display: 'flex', justifyContent: 'space-between' }}
             >
               <label>请求失败比例</label>
               <FailureRate />
@@ -96,11 +96,11 @@ const DevTool = () => {
         {/*<RequestTime/>*/}
       </Drawer>
     </div>
-  );
-};
+  )
+}
 
 export const installDevTool = () => {
-  const devToolsRoot = document.createElement("div");
-  document.body.appendChild(devToolsRoot);
-  ReactDOM.render(<DevTool />, devToolsRoot);
-};
+  const devToolsRoot = document.createElement('div')
+  document.body.appendChild(devToolsRoot)
+  ReactDOM.render(<DevTool />, devToolsRoot)
+}

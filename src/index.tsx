@@ -1,5 +1,4 @@
 import * as React from 'react'
-import styles from './styles.module.css'
 import { installDevTool } from './dev-tool'
 import { startServer } from './server'
 
@@ -16,5 +15,5 @@ export const loadDevTools = (callback: () => void) => {
 }
 
 export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+  return <div>Example Component: {text}</div>
 }
