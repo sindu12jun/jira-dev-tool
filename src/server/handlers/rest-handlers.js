@@ -1,5 +1,4 @@
 import { rest } from 'msw'
-import { ServerError } from '../util'
 import { getUser } from './account'
 
 const apiUrl = process.env.REACT_APP_API_URL;
@@ -51,14 +50,14 @@ export const getRestHandlers = (endpoint, db) => {
       const user = await getUser(req);
       const targetAddItem = Object.assign(req.body, { ownerId: user.id });
 
-      const nameExist = !!db
-        .queryByOwnerId(user.id)
-        .find((item) => item.name === targetAddItem.name);
-      if (nameExist) {
-        const error = new ServerError("此名字已存在");
-        error.status = 400;
-        throw error;
-      }
+      // const nameExist = !!db
+      //   .queryByOwnerId(user.id)
+      //   .find((item) => item.name === targetAddItem.name);
+      // if (nameExist) {
+      //   const error = new ServerError("此名字已存在");
+      //   error.status = 400;
+      //   throw error;
+      // }
 
       const detail = await db.create(convertIds(targetAddItem));
       return res(ctx.json(detail));
