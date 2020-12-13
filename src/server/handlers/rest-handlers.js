@@ -34,7 +34,7 @@ export const getRestHandlers = (endpoint, db) => {
     rest.patch(`${apiUrl}/${endpoint}/:id`, async (req, res, ctx) => {
       const { id } = convertIds(req.params);
       const updates = req.body;
-      const updatedItem = db.update(id, updates);
+      const updatedItem = db.update(Number(id), updates);
       return res(ctx.json(updatedItem));
     }),
 
