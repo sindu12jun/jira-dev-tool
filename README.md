@@ -5,4 +5,13 @@
 1. 后端服务
 2. 异步请求精准控制
 
+安装：
+```
+npx imooc-jira-tool
+```
+
 ![](.README_images/5d94d353.png)
+
+
+
+
