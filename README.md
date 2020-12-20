@@ -46,8 +46,7 @@ loadDevTools(() => {
 
 这个开发者工具可以精准地控制 HTTP请求的时间、失败概率、失败规则
 
-
-![](.README_images/5d94d353.png)
+[![rUHjc4.png](https://s3.ax1x.com/2020/12/20/rUHjc4.png)](https://imgchr.com/i/rUHjc4)
 
 
 
