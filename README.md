@@ -1,30 +1,8 @@
-# jira-dev-tool3
+# 2021 必修：React + React Hook + TS 最佳实践仿 Jira 企业级项目
 
-> Made with create-react-library
+专属开发者工具：
 
-[![NPM](https://img.shields.io/npm/v/jira-dev-tool3.svg)](https://www.npmjs.com/package/jira-dev-tool3) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+1. 后端服务
+2. 异步请求精准控制
 
-## Install
-
-```bash
-npm install --save jira-dev-tool3
-```
-
-## Usage
-
-```tsx
-import React, { Component } from 'react'
-
-import MyComponent from 'jira-dev-tool3'
-import 'jira-dev-tool3/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
-```
-
-## License
-
-MIT © [sindu12jun](https://github.com/sindu12jun)
+![](.README_images/5d94d353.png)
