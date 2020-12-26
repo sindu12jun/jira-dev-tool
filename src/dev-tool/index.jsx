@@ -12,7 +12,7 @@ import 'antd/dist/antd.css'
 const { Text, Link } = Typography
 const { TabPane } = Tabs
 
-const DevTool = () => {
+export const DevTool = () => {
   const [visible, setVisible] = useState(false)
   return (
     <div>

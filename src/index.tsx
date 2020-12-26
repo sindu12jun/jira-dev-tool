@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { installDevTool } from './dev-tool'
 import { startServer } from './server'
+import { DevTool } from './dev-tool'
 
 interface Props {
   text: string
@@ -8,11 +8,12 @@ interface Props {
 
 export const loadDevTools = (callback: () => void) => {
   startServer();
-  installDevTool()
   if (callback) {
     callback()
   }
 }
+
+export const Dev = DevTool
 
 export const ExampleComponent = ({ text }: Props) => {
   return <div>Example Component: {text}</div>
