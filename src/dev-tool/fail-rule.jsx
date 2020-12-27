@@ -34,7 +34,7 @@ export const FailRule = () => {
 
   const prefixSelector = (
     <Form.Item name="prefix" noStyle>
-      <Select defaultValue={"all"} onChange={setMethod} style={{ width: 100 }}>
+      <Select value={method} onChange={setMethod} style={{ width: 100 }}>
         <Option value="all">ALL</Option>
         <Option value="get">GET</Option>
         <Option value="post">POST</Option>

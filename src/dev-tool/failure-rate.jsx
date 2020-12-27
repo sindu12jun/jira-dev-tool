@@ -21,7 +21,6 @@ export const FailureRate = () => {
       value={failureRate}
       min={0}
       max={100}
-      defaultValue={0}
       onChange={handleChange}
     />
   );

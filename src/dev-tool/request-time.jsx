@@ -19,7 +19,6 @@ export const RequestTime = () => {
       value={minTime}
       min={0}
       max={1000 * 60}
-      defaultValue={200}
       onChange={handleChange}
     />
   );
