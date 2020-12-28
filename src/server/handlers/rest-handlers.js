@@ -3,15 +3,15 @@ import { getUser } from './account'
 
 const apiUrl = process.env.REACT_APP_API_URL
 
-const tryToArray = (value) => Array.isArray(value) ? value.map(Number) : Number(value)
+const tryToNumber = (value) => Array.isArray(value) ? value.map(Number) : Number(value)
 
 const convertIds = (object) => {
   const result = {}
   Object.keys(object).forEach((key) => {
     // 如果包含Id，比如personId，就要转换成数字
-    result[key] = key.includes('Id') ? tryToArray(object[key]) : object[key]
+    result[key] = key.includes('Id') ? tryToNumber(object[key]) : object[key]
   })
-  object.id = tryToArray(object.id)
+  result.id = tryToNumber(result.id)
   return result
 }
 
