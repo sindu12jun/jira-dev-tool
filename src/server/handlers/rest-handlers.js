@@ -43,7 +43,7 @@ export const getRestHandlers = (endpoint, db) => {
 
     // remove item
     rest.delete(`${apiUrl}/${endpoint}/:id`, async (req, res, ctx) => {
-      const { id } = req.params
+      const { id } = convertIds(req.params)
       db.remove(id)
       return res(ctx.json({ success: true }))
     }),
