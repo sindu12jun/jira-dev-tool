@@ -30,7 +30,7 @@ export const getRestHandlers = (endpoint, db) => {
     // query detail
     rest.get(`${apiUrl}/${endpoint}/:id`, async (req, res, ctx) => {
       const { id } = req.params
-      const item = db.detail(id)
+      const item = db.detail(+id)
       return res(ctx.json(item))
     }),
     // put item
