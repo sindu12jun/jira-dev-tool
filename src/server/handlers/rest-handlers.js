@@ -51,7 +51,15 @@ export const getRestHandlers = (endpoint, db) => {
     // create item
     rest.post(`${apiUrl}/${endpoint}`, async (req, res, ctx) => {
       const user = await getUser(req)
-      const targetAddItem = Object.assign(req.body, { ownerId: user.id })
+      let targetAddItem = Object.assign(req.body, { ownerId: user.id })
+
+      if (endpoint === 'tasks') {
+        targetAddItem = {
+          ...targetAddItem,
+          reporterId: user.id,
+          typeId: taskTypeDB.queryByOwnerId(user.id)[0].id
+        }
+      }
 
       // const nameExist = !!db
       //   .queryByOwnerId(user.id)
