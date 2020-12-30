@@ -57,7 +57,12 @@ class Rest {
 
   remove = (id) => {
     this.validateItem(id);
-    this.list = this.list.filter((item) => item.id !== id);
+    const target = this.list.find(item => item.id === id)
+    if(!target){
+      return
+    }
+    target.deleted = true
+    // this.list = this.list.filter((item) => item.id !== id);
     this.persist();
   };
 
@@ -81,7 +86,7 @@ class Rest {
   }
 
   query(param) {
-    return search(this.list, param);
+    return search(this.list, param).filter(item => !item.deleted);
   }
 
   queryByOwnerId(userId, param) {
