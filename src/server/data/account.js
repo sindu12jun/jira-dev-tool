@@ -17,12 +17,12 @@ try {
 
 const validateUserForm = ({ name, password }) => {
   if (!name) {
-    const error = new ServerError("A name is required");
+    const error = new ServerError("请传入用户名");
     error.status = 400;
     throw error;
   }
   if (!password) {
-    const error = new ServerError("A password is required");
+    const error = new ServerError("请传入密码");
     error.status = 400;
     throw error;
   }
@@ -50,7 +50,7 @@ const authenticate = ({ name, password }) => {
   if (user.passwordHash === hash(password)) {
     return { ...sanitizeUser(user), token: btoa(user.id + "") };
   }
-  const error = new ServerError("Invalid name or password");
+  const error = new ServerError("用户名或密码不正确");
   error.status = 400;
   throw error;
 };
@@ -58,7 +58,7 @@ const authenticate = ({ name, password }) => {
 function validateUser(id) {
   load();
   if (!users[id]) {
-    const error = new ServerError(`No user with the id "${id}"`);
+    const error = new ServerError(`没有找到id为 "${id}" 的用户，请尝试清空数据库`);
     error.status = 404;
     throw error;
   }
