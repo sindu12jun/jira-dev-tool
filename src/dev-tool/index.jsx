@@ -6,14 +6,16 @@ import { GlobalOutlined, SettingOutlined, SettingTwoTone, StopOutlined } from '@
 import { FailureRate } from './failure-rate'
 import { Reset } from './reset'
 import { FailRule } from './fail-rule'
-import { ReactQueryDevtools } from 'react-query/devtools'
+import { ReactQueryDevtoolsPanel } from 'react-query/devtools'
 import 'antd/dist/antd.css'
+import { QueryClientProvider, useQueryClient } from 'react-query'
 
 const { Text, Link } = Typography
 const { TabPane } = Tabs
 
 export const DevTool = () => {
   const [visible, setVisible] = useState(false)
+  const queryClient = useQueryClient()
   return (
     <div>
       {visible ? null : (
@@ -27,7 +29,7 @@ export const DevTool = () => {
         >
           <Tooltip title={'点击使用开发者控制台'}>
             <SettingTwoTone
-              style={{ fontSize: '22px'}}
+              style={{ fontSize: '22px' }}
               onClick={() => setVisible(true)}
             />
           </Tooltip>
@@ -89,7 +91,9 @@ export const DevTool = () => {
             }
             key="3"
           >
-            <ReactQueryDevtools />
+            <QueryClientProvider client={queryClient}>
+              <ReactQueryDevtoolsPanel />
+            </QueryClientProvider>
           </TabPane>
         </Tabs>
 
