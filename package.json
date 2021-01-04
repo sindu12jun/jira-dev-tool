@@ -64,6 +64,6 @@
     "antd": "^4.9.1",
     "jira-dev-tool": "^1.6.13",
     "msw": "^0.24.1",
-    "react-query": "^2.26.3",
+    "react-query": "^2.26.3"
   }
 }
