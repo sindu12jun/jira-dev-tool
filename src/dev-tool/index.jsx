@@ -8,7 +8,7 @@ import { Reset } from './reset'
 import { FailRule } from './fail-rule'
 import { ReactQueryDevtoolsPanel } from 'react-query/devtools'
 import 'antd/dist/antd.css'
-import { QueryClientProvider, useQueryClient } from 'react-query'
+import { useQueryClient } from 'react-query'
 
 const { Text, Link } = Typography
 const { TabPane } = Tabs
@@ -91,9 +91,7 @@ export const DevTool = () => {
             }
             key="3"
           >
-            <QueryClientProvider client={queryClient}>
-              <ReactQueryDevtoolsPanel />
-            </QueryClientProvider>
+            <ReactQueryDevtoolsPanel />
           </TabPane>
         </Tabs>
 
