@@ -6,7 +6,7 @@ import { GlobalOutlined, SettingOutlined, SettingTwoTone, StopOutlined } from '@
 import { FailureRate } from './failure-rate'
 import { Reset } from './reset'
 import { FailRule } from './fail-rule'
-import { ReactQueryDevtoolsPanel } from 'react-query-devtools'
+import { ReactQueryDevtools } from 'react-query/devtools'
 import 'antd/dist/antd.css'
 
 const { Text, Link } = Typography
@@ -89,7 +89,7 @@ export const DevTool = () => {
             }
             key="3"
           >
-            <ReactQueryDevtoolsPanel />
+            <ReactQueryDevtools />
           </TabPane>
         </Tabs>
 

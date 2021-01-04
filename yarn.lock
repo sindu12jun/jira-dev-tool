@@ -7062,6 +7062,16 @@ jest@24.9.0:
     import-local "^2.0.0"
     jest-cli "^24.9.0"
 
+jira-dev-tool@^1.6.13:
+  version "1.6.13"
+  resolved "https://registry.yarnpkg.com/jira-dev-tool/-/jira-dev-tool-1.6.13.tgz#d15fea435c4ced33e5a7b0394795936b8fa1ee7b"
+  integrity sha512-5z1VqwS+zrq7+u2BOq2AF2xG6c6IljBQFj3Br9RXMEyWPuNE6QNUQ4jI5rGlsLsl6+P4BKY49iwfgFMCyKShTw==
+  dependencies:
+    antd "^4.9.1"
+    msw "^0.24.1"
+    react-query "^2.26.3"
+    react-query-devtools "^2.6.3"
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -7579,6 +7589,14 @@ match-sorter@^4.1.0:
   integrity sha512-s+3h9TiZU9U1pWhIERHf8/f4LmBN6IXaRgo2CI17+XGByGS1GvG5VvXK9pcGyCjGe3WM3mSYRC3ipGrd5UEVgw==
   dependencies:
     "@babel/runtime" "^7.10.5"
+    remove-accents "0.4.2"
+
+match-sorter@^6.0.2:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/match-sorter/-/match-sorter-6.1.0.tgz#7fec6808d94311a35fef7fd842a11634f2361bd7"
+  integrity sha512-sKPMf4kbF7Dm5Crx0bbfLpokK68PUJ/0STUIOPa1ZmTZEA3lCaPK3gapQR573oLmvdkTfGojzySkIwuq6Z6xRQ==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
     remove-accents "0.4.2"
 
 maxmin@^2.1.0:
@@ -10177,6 +10195,14 @@ react-query@^2.26.3:
   integrity sha512-h4bhZioVY3kXfo+GLNg0zDn9XvbZkvK3I5eTzW82zpRwtJvUtxrkhrAyZ5N6A0Z9WPeRyo+384JubT5RkMaxEQ==
   dependencies:
     "@babel/runtime" "^7.5.5"
+
+react-query@^3.5.9:
+  version "3.5.9"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.5.9.tgz#2c001b5235e1afa11166a629c8645c9dd9464741"
+  integrity sha512-thlxrnl7cDg6qmk+N2ADjDVDJkoU3c7ZFJivYph0XoBDgkRIpb3A+tpqH7o6gu7JXZum9lfX1o294UfYfTiwvg==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    match-sorter "^6.0.2"
 
 react-scripts@^3.4.1:
   version "3.4.4"
