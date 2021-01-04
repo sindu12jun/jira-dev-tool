@@ -8,14 +8,12 @@ import { Reset } from './reset'
 import { FailRule } from './fail-rule'
 import { ReactQueryDevtoolsPanel } from 'react-query/devtools'
 import 'antd/dist/antd.css'
-import { useQueryClient } from 'react-query'
 
 const { Text, Link } = Typography
 const { TabPane } = Tabs
 
 export const DevTool = () => {
   const [visible, setVisible] = useState(false)
-  const queryClient = useQueryClient()
   return (
     <div>
       {visible ? null : (
