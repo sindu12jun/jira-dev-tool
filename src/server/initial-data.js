@@ -79,7 +79,7 @@ export const projects = [
 
 export const tasks = [
   {
-    name: "骑手管理注册界面开发",
+    name: "管理注册界面开发",
     tags: [1, 2],
     reporterId: 1,
     processorId: 2,
@@ -90,7 +90,7 @@ export const tasks = [
     note: "请尽快完成",
   },
   {
-    name: "骑手管理登录界面开发",
+    name: "管理登录界面开发",
     tags: [2],
     reporterId: 1,
     processorId: 2,

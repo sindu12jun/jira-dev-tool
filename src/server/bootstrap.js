@@ -50,6 +50,7 @@ export const bootstrap = (id) => {
       tags: [tagIds.random()],
       reporterId: userIds.random(),
       processorId: userIds.random(),
+      projectId: projectIds.random(),
       epicId: epicIds.random(),
       kanbanId: kanbanIds.random(),
       typeId: typeIds.random(),
