@@ -52,7 +52,7 @@ export const getRestHandlers = (endpoint, db) => {
     // create item
     rest.post(`${apiUrl}/${endpoint}`, async (req, res, ctx) => {
       const user = await getUser(req)
-      let targetAddItem = Object.assign(req.body, { ownerId: user.id })
+      let targetAddItem = Object.assign(req.body, { ownerId: user.id , created: new Date().getTime()})
 
       if (endpoint === 'tasks') {
         targetAddItem = {

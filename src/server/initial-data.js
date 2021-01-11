@@ -76,16 +76,16 @@ export const projects = [
     created: 1604989757139,
   },
   {
-    name: "团购 APP",
+    name: "快递管理",
     personId: 2,
-    organization: "团购组",
+    organization: "快读组",
     created: 1604989757139,
     pin: true,
   },
   {
-    name: "物料管理系统",
+    name: "游戏开发",
     personId: 2,
-    organization: "物料组",
+    organization: "娱乐组",
     created: 1546300800000,
   },
 ];
