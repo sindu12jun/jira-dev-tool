@@ -70,9 +70,9 @@ export const users = [
 
 export const projects = [
   {
-    name: "骑手管理",
+    name: "快递管理",
     personId: 1,
-    organization: "外卖组",
+    organization: "快递组",
     created: 1604989757139,
   },
 ];
