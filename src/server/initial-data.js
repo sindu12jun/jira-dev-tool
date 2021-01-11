@@ -88,18 +88,6 @@ export const projects = [
     organization: "物料组",
     created: 1546300800000,
   },
-  {
-    name: "总部管理系统",
-    personId: 3,
-    organization: "总部",
-    created: 1604980000011,
-  },
-  {
-    name: "送餐路线规划系统",
-    personId: 4,
-    organization: "外卖组",
-    created: 1546900800000,
-  },
 ];
 
 export const tasks = [
