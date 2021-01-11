@@ -75,19 +75,6 @@ export const projects = [
     organization: "外卖组",
     created: 1604989757139,
   },
-  {
-    name: "快递管理",
-    personId: 2,
-    organization: "快读组",
-    created: 1604989757139,
-    pin: true,
-  },
-  {
-    name: "游戏开发",
-    personId: 2,
-    organization: "娱乐组",
-    created: 1546300800000,
-  },
 ];
 
 export const tasks = [
