@@ -58,7 +58,8 @@ export const getRestHandlers = (endpoint, db) => {
         targetAddItem = {
           ...targetAddItem,
           reporterId: user.id,
-          typeId: taskTypeDB.queryByOwnerId(user.id)[0].id
+          typeId: taskTypeDB.queryByOwnerId(user.id)[0].id,
+          created: new Date().getTime()
         }
       }
 
