@@ -4,7 +4,7 @@
   "description": "React + TS JIRA 开发者工具",
   "author": "sindu12jun",
   "license": "MIT",
-  "repository": "sindu12jun/jira-dev-tool3",
+  "repository": "sindu12jun/jira-dev-tool",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
