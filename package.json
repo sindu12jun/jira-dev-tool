@@ -4,10 +4,13 @@
   "description": "React + TS JIRA 开发者工具",
   "author": "sindu12jun",
   "license": "MIT",
-  "repository": "sindu12jun/jira-dev-tool3",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sindu12jun/jira-dev-tool"
+  },
   "engines": {
     "node": ">=10"
   },
